@@ -19,7 +19,7 @@ describe('Appliance', function(){
     expect(oven.status).toEqual(false);
   });
 
-  it('repeatedly calls function on a meter when turned on', function(){
+  it('repeatedly calls increaseUsage function on a meter when turned on', function(){
 
     jasmine.clock().install();
 
@@ -36,7 +36,7 @@ describe('Appliance', function(){
     expect(oven.status).toEqual(true);
   });
 
-  it('no longer increases energy usage when turned off', function(){
+  it('no longer calls increaseUsage function on a meter when turned off', function(){
 
     jasmine.clock().install();
 
