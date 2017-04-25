@@ -4,11 +4,9 @@ window.onload = function(){
   var usageDisplay = document.getElementById('usage');
   var ovenDiv = document.getElementById('oven');
 
-  (function(){
-    setInterval(function(){
-      usageDisplay.innerHTML = oven.energyUsage;
-    }, 1000)
-  })();
+  setInterval(function(){
+    usageDisplay.innerHTML = oven.energyUsage;
+  }, 1000);
 
   ovenDiv.onclick  = function(){
     if(oven.status){
