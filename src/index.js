@@ -1,36 +1,22 @@
 window.onload = function(){
 
-  var meter = new SmartMeter();
-  var usageDispaly = document.getElementById('usage');
-  var oven = document.getElementById('oven');
-  var ovenStatus = false;
-  var myTimer;
+  var oven = new Appliance(2);
+  var usageDisplay = document.getElementById('usage');
+  var ovenDiv = document.getElementById('oven');
 
-  displayUsage();
+  (function(){
+    setInterval(function(){
+      usageDisplay.innerHTML = oven.energyUsage;
+    }, 1000)
+  })();
 
-  function displayUsage(){
-    usageDispaly.innerHTML = meter.usage;
-  }
-
-  oven.onclick = function(){
-    if(ovenStatus == false){
-      startTimer();
-      ovenStatus = true;
+  ovenDiv.onclick  = function(){
+    if(oven.status){
+      oven.turnOff();
     } else {
-      clearTimer();
-      ovenStatus = false;
+      oven.turnOn();
     }
   }
 
-  function startTimer(){
-    myTimer = setInterval(function(){
-      meter.increaseUsage();
-      displayUsage();
-    }, 1000);
-  }
-
-  function clearTimer(){
-    clearInterval(myTimer);
-  }
 
 }

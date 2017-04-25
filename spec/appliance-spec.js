@@ -43,7 +43,7 @@ describe('Appliance', function(){
 
     jasmine.clock().uninstall();
 
-    expect(oven.energyUsage).toEqual(4);    
+    expect(oven.energyUsage).toEqual(4);
   });
 
 
