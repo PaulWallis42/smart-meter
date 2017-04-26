@@ -1,4 +1,4 @@
-# Pure JavaScript Smart Meter Application
+# Smart Meter Application
 
 The app allows you to turn on and off your household electrical appliances each of which has a different energy usage.  When an electrical appliance is turned on the energy usage is show and updated every second.  The more appliances that are turned on, the higher the energy output.  The output is represented by a figure displayed in the browser window which is coloured green for low usage, orange for medium usage and red for high usage.
 
