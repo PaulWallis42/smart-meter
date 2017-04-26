@@ -48,6 +48,10 @@ window.onload = function(){
         efficiencyCount ++;
       }
     });
+    changeClass(efficiencyCount);
+  }
+
+  function changeClass(efficiencyCount){
     if(efficiencyCount <= 1){
       usageDisplay.className = "low";
     } else if (efficiencyCount == 2){
@@ -56,7 +60,5 @@ window.onload = function(){
       usageDisplay.className = "high";
     }
   }
-
-
 
 }
