@@ -10,19 +10,34 @@
 
 <body>
 
-  <h2>Energy Usage:</h2>
-  <h2 class="low" id="usage">0</h2>
+  <h1>Energy Usage:</h1>
+  <h1 class="low" id="usage">0</h1>
 
-  <div id="oven">
+  <div class="appliances">
+    <img src="public/oven.jpg" alt="Oven" height="100" width="100">
     <h4>Oven</h4>
+    <label class="switch">
+      <input type="checkbox">
+      <div id="oven" class="slider round"></div>
+    </label>
   </div>
 
-  <div id="fridge">
+  <div class="appliances">
+    <img src="public/fridge.jpeg" alt="Oven" height="100" width="100">
     <h4>Fridge</h4>
+    <label class="switch">
+      <input type="checkbox">
+      <div id="fridge" class="slider round"></div>
+    </label>
   </div>
 
-  <div id="heating">
+  <div class="appliances">
+    <img src="public/heating.jpg" alt="Oven" height="100" width="100">
     <h4>Heating</h4>
+    <label class="switch">
+      <input type="checkbox">
+      <div id="heating" class="slider round"></div>
+    </label>
   </div>
 
   <script src="src/smart-meter.js"></script>
