@@ -5,6 +5,8 @@ window.onload = function(){
   var fridge = new Appliance(1);
   var heating = new Appliance(3);
 
+  var applianceArray = [oven, fridge, heating];
+
   var usageDisplay = document.getElementById('usage');
   var ovenDiv = document.getElementById('oven');
   var fridgeDiv = document.getElementById('fridge');
@@ -12,6 +14,7 @@ window.onload = function(){
 
   setInterval(function(){
     usageDisplay.innerHTML = meter.usage;
+    efficiency();
   }, 1000);
 
   ovenDiv.onclick  = function(){
@@ -37,6 +40,23 @@ window.onload = function(){
       heating.turnOn(meter);
     }
   }
+
+  function efficiency(){
+    var efficiencyCount = 0;
+    applianceArray.forEach(function(appliance){
+      if(appliance.status){
+        efficiencyCount ++;
+      }
+    });
+    if(efficiencyCount <= 1){
+      usageDisplay.className = "low";
+    } else if (efficiencyCount == 2){
+      usageDisplay.className = "medium";
+    } else {
+      usageDisplay.className = "high";
+    }
+  }
+
 
 
 }

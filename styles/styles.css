@@ -1,1 +1,11 @@
+.low {
+  color: green;
+}
 
+.medium {
+  color: orange;
+}
+
+.high {
+  color: red;
+}
